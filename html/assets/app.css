@@ -1,0 +1,39 @@
+.gradient {
+    background: linear-gradient(90deg, #2073B3 0%, #92B8FF 100%);
+}
+
+.background-orange {
+    background: #FFCD91;
+}
+
+.color-white {
+    color:#FAFCF6;
+}
+
+.color-orange {
+    color:#FFCD91;
+}
+
+.color-blue-light {
+    color:#92B8FF;
+}
+
+.color-blue {
+    color:#2073B3;
+}
+
+.color-gold {
+    color: gold;
+}
+
+.border-achievement-aquired {
+    border: 3px solid #FFCD91;
+}
+
+.border-achievement-todo {
+    border: 3px solid #92B8FF;
+}
+
+.img-achievement {
+    max-width: 200px;
+}
