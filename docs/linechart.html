@@ -10,16 +10,17 @@
 <script>
     async function loadWeight() {
         const ctx = document.getElementById('myChart');
-        const reponse = await fetch("data/poop.json");
-        const poopData = await reponse.json();
+        const reponse = await fetch("data/weight.json");
+        const weightData = await reponse.json();
 
         new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
-                labels: poopData.dates,
+                labels: weightData.dates,
                 datasets: [{
-                    data: poopData.day_success_rate,
-                    backgroundColor: '#92B8FF',
+                    data: weightData.values,
+                    borderColor: '#FFCD91',
+                    tension: 0.1
                 }]
             },
             options: {
