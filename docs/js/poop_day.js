@@ -22,7 +22,7 @@ async function loadPoopDay() {
                     borderWidth: 2
                 },
                 {
-                    label: "Dedans (nb)",
+                    label: "Dans la maison (nb)",
                     data: poopData.day_nb_failure,
                     borderColor: '#96126d',
                     tension: 0.1,
