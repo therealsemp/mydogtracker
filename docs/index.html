@@ -113,8 +113,9 @@
         </div>
         <div class="w-full sm:w-2/3 p-6">
           <canvas id="weightChart"></canvas>
-        </div>
+        </div>       
       </div>
+      <!--
       <div class="flex flex-wrap flex-col-reverse sm:flex-row">
         <div class="w-full sm:w-2/3 p-6 mt-6">
           <p class="text-gray-600 mb-8">
@@ -135,6 +136,7 @@
           </div>
         </div>
       </div>
+      -->
     </div>
     <script src="js/weight.js"></script><!-- loading weight data-->
   </section>
@@ -159,15 +161,13 @@
           </p>
         </div>
         <div class="w-full sm:w-2/3 p-6">
-          <p class="text-gray-600 mb-8">
-            Graphe % echec en journée
-          </p>
+          <canvas id="poopDayChart"></canvas>
         </div>
       </div>
       <div class="flex flex-wrap flex-col-reverse sm:flex-row">
         <div class="w-full sm:w-2/3 p-6 mt-6">
           <p class="text-gray-600 mb-8">
-            Graphe % echec en journée
+            Graphe % echec nuit
           </p>
         </div>
         <div class="w-full sm:w-1/6 p-6 mt-6">
@@ -184,6 +184,7 @@
         </div>
       </div>
     </div>
+    <script src="js/poop.js"></script><!-- loading poop data-->
   </section>
   <section class="bg-white border-b py-8">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
@@ -199,7 +200,7 @@
         <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
       <div class="flex space-x-4 w-full">
-        <div class="md:w-1/3 p-6 gap-y-4 flex flex-col flex-shrink items-center bg-white rounded-t border-achievement-aquired shadow">
+        <div class="w-full md:w-1/3 p-6 gap-y-4 flex flex-col flex-grow flex-shrink items-center bg-white rounded-t border-achievement-aquired shadow">
           <div class="font-bold text-xl text-gray-800">
             Assis
           </div>
@@ -210,7 +211,7 @@
             <span>Acquis le 08 Avril 2024</span>
           </div>
         </div>
-        <div class="md:w-1/3 p-6 gap-y-4 flex flex-col flex-shrink items-center bg-white rounded-t shadow">
+        <div class="w-full md:w-1/3 p-6 gap-y-4 flex flex-col flex-grow flex-shrink items-center bg-white rounded-t shadow">
           <div class="font-bold text-xl text-gray-800">
             Viens
           </div>
@@ -221,7 +222,7 @@
             <span>En cours d'apprentissage</span>
           </div>
         </div>
-        <div class="md:w-1/3 p-6 gap-y-4 flex flex-col flex-shrink items-center bg-white rounded-t shadow">
+        <div class="w-full md:w-1/3 p-6 gap-y-4 flex flex-col flex-grow flex-shrink items-center bg-white rounded-t shadow">
           <div class="font-bold text-xl text-gray-800">
             Propreté
           </div>

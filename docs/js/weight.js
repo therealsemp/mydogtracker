@@ -1,4 +1,4 @@
-async function loadWeight() {
+async function loadPoopDay() {
     const ctx = document.getElementById('weightChart');
     const reponse = await fetch("data/weight.json");
     const weightData = await reponse.json();
@@ -33,4 +33,4 @@ async function loadWeight() {
         }
     });
 }
-loadWeight();
+loadPoopDay();
