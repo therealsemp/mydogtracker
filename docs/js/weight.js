@@ -1,8 +1,12 @@
 async function loadPoopDay() {
-    const ctx = document.getElementById('weightChart');
+    // loading data
     const reponse = await fetch("data/weight.json");
     const weightData = await reponse.json();
+    // update last weight
+    document.getElementById("weight_value").innerHTML = weightData.values.findLast(w => w !== null) + " kg";
 
+    // create weight chart
+    const ctx = document.getElementById('weightChart');
     new Chart(ctx, {
         type: 'line',
         data: {
