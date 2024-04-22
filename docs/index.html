@@ -34,17 +34,18 @@
         class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
         id="nav-content">
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
-          <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#">link</a>
-          </li>
-          <li class="mr-3">
-            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-              href="#">link</a>
-          </li>
+          <li class="mx-2">
+            <a class="inline-block text-black no-underline py-2 selected_anchor" href="#anchor_size">Poids et taille</a>
+          </li> |
+          <li class="mx-2">
+            <a class="inline-block text-black no-underline py-2" href="#anchor_cleanliness">Propreté</a>
+          </li> |
+          <li class="mx-2">
+            <a class="inline-block text-black no-underline py-2" href="#anchor_achievements">Mes progrès</a>
+          </li> |
+          <li class="mx-2">
+            <a class="inline-block text-black no-underline py-2" href="#anchor_bttp">Best time to poop</a>
+          </li> |
         </ul>
       </div>
     </div>
@@ -92,7 +93,7 @@
       </g>
     </svg>
   </div>
-  <section class="bg-white border-b py-8">
+  <section class="bg-white border-b py-8" id="anchor_size">
     <div class="container max-w-5xl mx-auto m-8">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Un beau garçon
@@ -142,7 +143,7 @@
     <script src="js/size.js"></script><!-- loading size data-->
     <script src="js/weight.js"></script><!-- loading weight data-->
   </section>
-  <section class="bg-gray-100 border-b py-8">
+  <section class="bg-gray-100 border-b py-8" id="anchor_cleanliness">
     <div class="container max-w-5xl mx-auto m-8">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Propreté
@@ -180,7 +181,7 @@
     <script src="js/poop_day.js"></script><!-- loading poop data-->
     <script src="js/poop_night.js"></script><!-- loading poop data-->
   </section>
-  <section class="bg-white border-b py-8">
+  <section class="bg-white border-b py-8" id="anchor_achievements">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Un bon chien
@@ -265,7 +266,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-gray-100 border-b py-8">
+  <section class="bg-gray-100 border-b py-8" id="anchor_bttp">
     <div class="container max-w-5xl mx-auto m-8">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Best time to poop
@@ -323,46 +324,8 @@
     <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
     </h2>
   </section>
-  <!-- jQuery if you need it
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  -->
-  <script>
-    /*Toggle dropdown list*/
-    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
-    var navMenuDiv = document.getElementById("nav-content");
-    var navMenu = document.getElementById("nav-toggle");
-
-    document.onclick = check;
-    function check(e) {
-      var target = (e && e.target) || (event && event.srcElement);
-
-      //Nav Menu
-      if (!checkParent(target, navMenuDiv)) {
-        // click NOT on the menu
-        if (checkParent(target, navMenu)) {
-          // click on the link
-          if (navMenuDiv.classList.contains("hidden")) {
-            navMenuDiv.classList.remove("hidden");
-          } else {
-            navMenuDiv.classList.add("hidden");
-          }
-        } else {
-          // click both outside link and outside menu, hide menu
-          navMenuDiv.classList.add("hidden");
-        }
-      }
-    }
-    function checkParent(t, elm) {
-      while (t.parentNode) {
-        if (t == elm) {
-          return true;
-        }
-        t = t.parentNode;
-      }
-      return false;
-    }
-  </script>
+  <script src="js/scrollspy.js"></script>
 </body>
 
 </html>
