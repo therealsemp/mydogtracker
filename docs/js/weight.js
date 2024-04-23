@@ -5,6 +5,9 @@ async function loadPoopDay() {
     // update last weight
     document.getElementById("weight_value").innerHTML = weightData.values.findLast(w => w !== null) + " kg";
 
+    var weight_date = new Date(weightData.dates.findLast(d => d !== null)).toLocaleDateString('fr-fr', { year: "numeric", month: "long", day: "numeric" });
+    document.getElementById("weight_date").innerHTML = weight_date;
+
     // create weight chart
     const ctx = document.getElementById('weightChart');
     new Chart(ctx, {
