@@ -13,5 +13,42 @@ async function loadPoopDay() {
 
     var size_date = new Date(sizeData.dates.findLast(d => d !== null)).toLocaleDateString('fr-fr', { year: "numeric", month: "long", day: "numeric" });
     document.getElementById("size_date").innerHTML = size_date;
+
+
+    // chart
+    const ctx = document.getElementById('sizeChart');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: sizeData.dates,
+            datasets: [{
+                data: sizeData.back,
+                borderColor: '#8a1a12',
+                tension: 0.1
+            }, {
+                data: sizeData.shoulder,
+                borderColor: '#2073B3',
+                tension: 0.1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'day'
+                    }
+                },
+                y: {
+                    beginAtZero: false
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+        }
+    });
 }
 loadPoopDay();

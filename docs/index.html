@@ -106,17 +106,16 @@
           <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
             Mon poids
           </h3>
-          <p class="text-gray-600 mb-8">
+          <p class="text-gray-600">
             Je pèse <span class="font-bold" id="weight_value"></span> (<span id="weight_date"></span>).
             <br />
             J'avoue, j'ai un appétit démesuré. Mais mes maîtres veillent au grain pour que je reste fit.
             <br />
             <br />
-
           </p>
         </div>
         <div class="w-full sm:w-2/3 p-6">
-          <canvas id="weightChart"></canvas>
+          <canvas id="weightChart" style="min-height: 300px;"></canvas>
         </div>
       </div>
       <div class="flex flex-wrap md:flex-row-reverse">
@@ -124,19 +123,20 @@
           <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
             Mes dimensions
           </h3>
-          <p class="text-gray-600 mb-8">
+          <p class="text-gray-600">
             Je mesure <span class="font-bold" id="size_back_value"></span> du cou à la queue et <span class="font-bold"
               id="size_shoulder_value"></span> au garrot (<span id="size_date"></span>).
           </p>
-        </div>
-        <div class="w-full md:w-2/3 p-6">
           <div class="relative w-full">
             <img class="object-contain w-full" src="assets/img/size.png">
             <div id="size_back_value_img" class="absolute"
-              style="color: brown; top: 23%; left: 50%; font-weight: bold;"></div>
+              style="color: brown; top: 20%; left: 50%; font-weight: bold;"></div>
             <div id="size_shoulder_value_img" class="absolute"
               style="color: blue; top: 50%; left: 40%; font-weight: bold;"></div>
           </div>
+        </div>
+        <div class="w-full md:w-2/3 p-6">
+          <canvas id="sizeChart"></canvas>
         </div>
       </div>
     </div>
@@ -231,7 +231,8 @@
             <span>Acquis le 21 Avril 2024</span>
           </div>
         </div>
-        <div class="w-full p-6 gap-y-4 flex flex-col flex-grow flex-shrink items-center bg-white rounded-t shadow border-achievement-aquired">
+        <div
+          class="w-full p-6 gap-y-4 flex flex-col flex-grow flex-shrink items-center bg-white rounded-t shadow border-achievement-aquired">
           <div class="font-bold text-xl text-gray-800">
             Promenade en laisse
           </div>

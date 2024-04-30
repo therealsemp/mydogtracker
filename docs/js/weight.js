@@ -29,7 +29,7 @@ async function loadPoopDay() {
                     }
                 },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: false
                 }
             },
             plugins: {
