@@ -8,6 +8,7 @@ async function loadPoopDay() {
         data: {
             labels: poopData.dates,
             datasets: [
+                /*
                 {
                     label: "Dehors (%)",
                     data: poopData.day_success_rate,
@@ -21,6 +22,7 @@ async function loadPoopDay() {
                     borderColor: '#FFFFFF',
                     borderWidth: 2
                 },
+                */
                 {
                     label: "Dans la maison (nb)",
                     data: poopData.day_nb_failure,
@@ -28,7 +30,7 @@ async function loadPoopDay() {
                     tension: 0.1,
                     type: 'line',
                     order: 0,
-                    yAxisID: 'y1',
+                    //yAxisID: 'y1',
                 }
             ]
         },
@@ -46,6 +48,7 @@ async function loadPoopDay() {
                         drawOnChartArea: false,
                     },
                 },
+                /*
                 y1: {
                     position: 'right',
                     max: 10,
@@ -53,7 +56,9 @@ async function loadPoopDay() {
                     grid: {
                         drawOnChartArea: false,
                     },
+                
                 }
+                */
             },
             plugins: {
                 legend: {
